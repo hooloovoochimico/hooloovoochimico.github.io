@@ -2,139 +2,59 @@ export type Lang = 'en' | 'it';
 
 export const ui = {
   en: {
-    title: 'Angelo Moroni — Custom AI & software for small businesses',
+    title: 'Angelo Moroni — Software developer',
     description:
-      'Freelance software developer. Custom AI integrations for small and medium businesses, web and mobile apps, automation.',
-    nav: { services: 'Services', process: 'How I work', projects: 'Projects', contact: 'Contact' },
+      'Software developer: Android and Kotlin Multiplatform apps, Python, AI agents. I use AI throughout my workflow to build faster and better.',
+    nav: { about: 'About', projects: 'Projects', contact: 'Contact' },
     hello: "Hi, I'm Angelo Moroni",
-    headline: 'AI that actually fits how your business works.',
+    headline: 'I build apps and software, with AI as part of the team.',
     tagline:
-      'I help small and medium businesses use AI and custom software where it saves real time: assistants that know your documents, automations that remove repetitive work, apps built around your processes.',
-    meta: 'Freelance software developer · Santhià · Rome · remote across Italy',
-    ctaPrimary: "Let's talk about your project",
+      'Software developer between Santhià and Rome. I have been building Android apps for over ten years; today I work mostly with Kotlin Multiplatform, Python and AI agents.',
+    ctaPrimary: 'Get in touch',
     ctaSecondary: 'See my work',
-    servicesTitle: 'Services',
-    servicesIntro: 'From a first prototype to a tool your team uses every day.',
-    processTitle: 'How I work',
-    processIntro: 'Small steps, clear costs, something working early.',
-    projectsTitle: 'Things I built',
-    projectsIntro: 'Personal and open-source projects that show the kind of work I do.',
+    aboutTitle: 'How I work',
+    about: [
+      'AI is part of my daily workflow: I use coding agents like Claude Code to plan, write, test and review software, while design decisions and quality stay in my hands. That lets me take a small project from idea to store in weeks rather than months.',
+      'I like building things that people actually use: an app on the Play Store, a bot that answers on Telegram, a map that changes how you look at your region. Most of the projects below were born from a concrete need.',
+    ],
+    projectsTitle: 'Projects',
+    projectsIntro: 'Some things I built and keep alive.',
     code: 'Code',
     live: 'Live',
+    store: 'Google Play',
     skillsTitle: 'Tech I work with',
-    contactTitle: "Let's talk",
+    contactTitle: 'Have an idea or a problem to solve?',
     contactText:
-      'Tell me what slows your business down or what you would like to build. The first conversation is just about understanding the problem, with no commitment.',
+      'An app, an internal tool, or a way to bring AI into how your business works: I bring the same AI-assisted workflow I use on my own projects. Write me, even just to talk it through.',
     contactCta: 'Write me an email',
     switchLang: 'Italiano',
   },
   it: {
-    title: 'Angelo Moroni — AI e software su misura per PMI',
+    title: 'Angelo Moroni — Sviluppatore software',
     description:
-      'Sviluppatore software freelance. Integrazioni AI su misura per piccole e medie imprese, app web e mobile, automazioni.',
-    nav: { services: 'Servizi', process: 'Come lavoro', projects: 'Progetti', contact: 'Contatti' },
+      'Sviluppatore software: app Android e Kotlin Multiplatform, Python, agenti AI. Uso l\'intelligenza artificiale in tutto il mio flusso di lavoro.',
+    nav: { about: 'Chi sono', projects: 'Progetti', contact: 'Contatti' },
     hello: 'Ciao, sono Angelo Moroni',
-    headline: "L'intelligenza artificiale, su misura per la tua azienda.",
+    headline: "Costruisco app e software, con l'AI come parte del team.",
     tagline:
-      'Aiuto piccole e medie imprese a usare AI e software su misura dove fanno risparmiare tempo davvero: assistenti che conoscono i vostri documenti, automazioni che eliminano il lavoro ripetitivo, app costruite attorno ai vostri processi.',
-    meta: 'Sviluppatore software freelance · Santhià · Roma · da remoto in tutta Italia',
-    ctaPrimary: 'Parliamo del tuo progetto',
-    ctaSecondary: 'Guarda i miei lavori',
-    servicesTitle: 'Servizi',
-    servicesIntro: 'Dal primo prototipo allo strumento che il tuo team usa ogni giorno.',
-    processTitle: 'Come lavoro',
-    processIntro: 'Passi piccoli, costi chiari, qualcosa di funzionante fin da subito.',
-    projectsTitle: 'Cosa ho costruito',
-    projectsIntro: 'Progetti personali e open source che mostrano il tipo di lavoro che faccio.',
+      'Sviluppatore software tra Santhià e Roma. Faccio app Android da oltre dieci anni; oggi lavoro soprattutto con Kotlin Multiplatform, Python e agenti AI.',
+    ctaPrimary: 'Contattami',
+    ctaSecondary: 'Guarda i progetti',
+    aboutTitle: 'Come lavoro',
+    about: [
+      "L'intelligenza artificiale fa parte del mio lavoro di ogni giorno: uso agenti di sviluppo come Claude Code per progettare, scrivere, testare e rivedere il codice, mentre le scelte di progetto e la qualità restano in mano mia. Così un progetto piccolo passa dall'idea allo store in settimane invece che in mesi.",
+      'Mi piace costruire cose che le persone usano davvero: un\'app sul Play Store, un bot che risponde su Telegram, una mappa che cambia il modo di guardare il proprio territorio. Quasi tutti i progetti qui sotto sono nati da un bisogno concreto.',
+    ],
+    projectsTitle: 'Progetti',
+    projectsIntro: 'Alcune cose che ho costruito e che tengo vive.',
     code: 'Codice',
     live: 'Demo',
+    store: 'Google Play',
     skillsTitle: 'Tecnologie',
-    contactTitle: 'Parliamone',
+    contactTitle: 'Hai un\'idea o un problema da risolvere?',
     contactText:
-      'Raccontami cosa rallenta la tua attività o cosa vorresti costruire. Il primo confronto serve solo a capire il problema, senza impegno.',
+      "Un'app, uno strumento interno o un modo per portare l'AI nel lavoro della tua azienda: porto lo stesso metodo che uso sui miei progetti, con l'AI integrata in ogni fase. Scrivimi, anche solo per parlarne.",
     contactCta: 'Scrivimi una email',
     switchLang: 'English',
   },
 } as const;
-
-export const services: { icon: string; title: Record<Lang, string>; text: Record<Lang, string>; examples: Record<Lang, string[]> }[] = [
-  {
-    icon: '✦',
-    title: { en: 'Custom AI integrations', it: 'Integrazioni AI su misura' },
-    text: {
-      en: 'Assistants and agents connected to your data and tools, running on the model that fits your budget and privacy needs (Claude, GPT, Gemini or open models).',
-      it: 'Assistenti e agenti collegati ai vostri dati e strumenti, sul modello più adatto a budget e privacy (Claude, GPT, Gemini o modelli open).',
-    },
-    examples: {
-      en: ['Q&A over manuals, contracts, procedures', 'Email and document triage', 'Telegram / WhatsApp / web chatbots'],
-      it: ['Risposte da manuali, contratti, procedure', 'Smistamento di email e documenti', 'Chatbot su Telegram, WhatsApp, sito web'],
-    },
-  },
-  {
-    icon: '⟳',
-    title: { en: 'Process automation', it: 'Automazione dei processi' },
-    text: {
-      en: 'Remove repetitive work between the tools you already use: spreadsheets, email, calendars, management software.',
-      it: 'Elimino il lavoro ripetitivo tra gli strumenti che già usate: fogli di calcolo, email, calendari, gestionali.',
-    },
-    examples: {
-      en: ['Data extraction from PDFs and invoices', 'Automatic reports', 'Integrations between existing systems'],
-      it: ['Estrazione dati da PDF e fatture', 'Report automatici', 'Integrazione tra sistemi esistenti'],
-    },
-  },
-  {
-    icon: '▢',
-    title: { en: 'Web apps and portals', it: 'Web app e portali' },
-    text: {
-      en: 'Custom web tools for your team or your clients: reserved areas, dashboards, internal tools.',
-      it: 'Strumenti web su misura per il team o i clienti: aree riservate, dashboard, gestionali interni.',
-    },
-    examples: {
-      en: ['Client portals', 'Internal dashboards', 'Booking and request management'],
-      it: ['Portali clienti', 'Dashboard interne', 'Gestione richieste e prenotazioni'],
-    },
-  },
-  {
-    icon: '▯',
-    title: { en: 'Mobile apps', it: 'App mobile' },
-    text: {
-      en: 'Android and iOS apps with Kotlin Multiplatform: one codebase, native performance. Over ten years of Android experience.',
-      it: 'App Android e iOS con Kotlin Multiplatform: un solo codice, prestazioni native. Oltre dieci anni di esperienza su Android.',
-    },
-    examples: {
-      en: ['New apps from scratch', 'Modernising existing apps', 'Offline-first apps'],
-      it: ['App nuove da zero', 'Modernizzazione di app esistenti', 'App che funzionano offline'],
-    },
-  },
-];
-
-export const steps: { title: Record<Lang, string>; text: Record<Lang, string> }[] = [
-  {
-    title: { en: 'Understand', it: 'Capire' },
-    text: {
-      en: 'A call to understand your problem and where software can actually help, and where it cannot.',
-      it: 'Una call per capire il problema e dove il software può aiutare davvero, e dove no.',
-    },
-  },
-  {
-    title: { en: 'Propose', it: 'Proporre' },
-    text: {
-      en: 'A written proposal with scope, timeline and a fixed or capped cost.',
-      it: 'Una proposta scritta con obiettivi, tempi e costo fisso o con un tetto massimo.',
-    },
-  },
-  {
-    title: { en: 'Prototype', it: 'Prototipare' },
-    text: {
-      en: 'A working version in a few weeks, tested on your real data.',
-      it: 'Una prima versione funzionante in poche settimane, provata sui vostri dati reali.',
-    },
-  },
-  {
-    title: { en: 'Deliver and support', it: 'Consegnare e seguire' },
-    text: {
-      en: 'Deployment, documentation, training for your team and ongoing support.',
-      it: 'Messa in produzione, documentazione, formazione del team e assistenza nel tempo.',
-    },
-  },
-];

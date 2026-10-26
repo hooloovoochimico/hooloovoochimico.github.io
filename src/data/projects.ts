@@ -4,14 +4,25 @@ const GH = 'https://github.com/chemickypes';
 
 export interface Project {
   name: string;
-  repo: string;
+  repo?: string;
   live?: string;
+  store?: string;
   image?: string;
   tags: string[];
   summary: Record<Lang, string>;
 }
 
 export const projects: Project[] = [
+  {
+    name: 'HPDFViewer',
+    store: 'https://play.google.com/store/apps/details?id=com.hooloovoochimico.hpdfviewer',
+    image: '/img/hpdfviewer.png',
+    tags: ['Kotlin', 'Jetpack Compose', 'Android', 'Claude Code'],
+    summary: {
+      en: 'An Android app to read, fill in, sign and share PDFs, live on Google Play. Built with a team of AI coding agents (Claude Code): spec, task waves, parallel branches and AI review, with me as architect and reviewer.',
+      it: "App Android per leggere, compilare, firmare e condividere PDF, pubblicata su Google Play. Costruita con un team di agenti AI (Claude Code): specifiche, task a ondate, branch in parallelo e revisione automatica, con me nel ruolo di architetto e revisore.",
+    },
+  },
   {
     name: 'HBible',
     repo: `${GH}/hbible`,
@@ -73,7 +84,7 @@ export const projects: Project[] = [
 
 export const skills: { group: Record<Lang, string>; items: string[] }[] = [
   { group: { en: 'Mobile', it: 'Mobile' }, items: ['Kotlin', 'Jetpack Compose', 'Kotlin Multiplatform', 'Android SDK', 'Flutter'] },
-  { group: { en: 'AI & backend', it: 'AI e backend' }, items: ['Python', 'LLM agents', 'RAG', 'Claude / OpenAI / Gemini APIs', 'Agno', 'TypeScript'] },
+  { group: { en: 'AI & backend', it: 'AI e backend' }, items: ['Python', 'LLM agents', 'Claude Code', 'Claude / OpenAI / Gemini APIs', 'Agno', 'TypeScript'] },
   { group: { en: 'Data', it: 'Dati' }, items: ['GeoPandas', 'scikit-learn', 'SQL', 'Leaflet'] },
   { group: { en: 'Embedded', it: 'Embedded' }, items: ['C++', 'ESP32', 'Arduino', 'PlatformIO'] },
 ];
