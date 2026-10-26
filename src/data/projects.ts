@@ -84,7 +84,7 @@ export const projects: Project[] = [
 
 export const skills: { group: Record<Lang, string>; items: string[] }[] = [
   { group: { en: 'Mobile', it: 'Mobile' }, items: ['Kotlin', 'Jetpack Compose', 'Kotlin Multiplatform', 'Android SDK', 'Flutter'] },
-  { group: { en: 'AI & backend', it: 'AI e backend' }, items: ['Python', 'LLM agents', 'Claude Code', 'Claude / OpenAI / Gemini APIs', 'Agno', 'TypeScript'] },
+  { group: { en: 'AI & backend', it: 'AI e backend' }, items: ['Python', 'LLM agents', 'Claude Code', 'OpenCode', 'Z.ai GLM', 'Claude / OpenAI / Gemini APIs', 'Agno', 'TypeScript'] },
   { group: { en: 'Data', it: 'Dati' }, items: ['GeoPandas', 'scikit-learn', 'SQL', 'Leaflet'] },
   { group: { en: 'Embedded', it: 'Embedded' }, items: ['C++', 'ESP32', 'Arduino', 'PlatformIO'] },
 ];
