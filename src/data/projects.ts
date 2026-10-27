@@ -9,12 +9,14 @@ export interface Project {
   store?: string;
   image?: string;
   tags: string[];
+  tone: 'navy' | 'teal' | 'ink' | 'yellow' | 'violet' | 'pink' | 'gray';
   summary: Record<Lang, string>;
 }
 
 export const projects: Project[] = [
   {
     name: 'HPDFViewer',
+    tone: 'navy',
     store: 'https://play.google.com/store/apps/details?id=com.hooloovoochimico.hpdfviewer',
     image: '/img/hpdfviewer.png',
     tags: ['Kotlin', 'Jetpack Compose', 'Android', 'Claude Code'],
@@ -25,6 +27,7 @@ export const projects: Project[] = [
   },
   {
     name: 'HBible',
+    tone: 'teal',
     repo: `${GH}/hbible`,
     tags: ['Kotlin Multiplatform', 'Compose', 'Android', 'iOS', 'AI'],
     summary: {
@@ -34,6 +37,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Termina Launcher',
+    tone: 'ink',
     repo: `${GH}/termina-launcher`,
     image: '/img/termina.png',
     tags: ['Kotlin', 'Jetpack Compose', 'Android'],
@@ -44,6 +48,7 @@ export const projects: Project[] = [
   },
   {
     name: 'AnClaw',
+    tone: 'yellow',
     repo: `${GH}/AnClaw-Telegram-AI-Agent-`,
     tags: ['Python', 'Agno', 'Gemini', 'Multi-agent'],
     summary: {
@@ -53,6 +58,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Yellow Racer',
+    tone: 'violet',
     repo: `${GH}/Yellow-Racer`,
     image: '/img/yellow-racer.png',
     tags: ['C++', 'ESP32', 'PlatformIO', 'Game dev'],
@@ -63,6 +69,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Redrawing Italy\'s Provinces',
+    tone: 'pink',
     repo: `${GH}/map-project`,
     live: 'https://chemickypes.github.io/map-project/',
     tags: ['Python', 'GeoPandas', 'scikit-learn', 'Leaflet'],
@@ -73,6 +80,7 @@ export const projects: Project[] = [
   },
   {
     name: 'YT WrAIter',
+    tone: 'gray',
     repo: `${GH}/YTWrAIter`,
     tags: ['Python', 'Cheshire Cat AI', 'LLM'],
     summary: {

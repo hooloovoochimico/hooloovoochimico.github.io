@@ -15,10 +15,10 @@ const site = Astro.site!.origin;
     <meta name="description" content={t.description} />
     <link rel="alternate" hreflang="en" href={`${site}/`} />
     <link rel="alternate" hreflang="it" href={`${site}/it/`} />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='monospace'>&gt;_</text></svg>" />
+    <link rel="icon" href="/img/avatar.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <slot />
@@ -27,42 +27,50 @@ const site = Astro.site!.origin;
 
 <style is:global>
   :root {
-    --bg: #fafaf7;
-    --surface: #ffffff;
-    --text: #1c1c1a;
-    --muted: #63635d;
-    --border: #e4e4dd;
-    --accent: #1f7a4d;
-    --accent-soft: #e3f2e9;
-    --mono: 'JetBrains Mono', ui-monospace, monospace;
-    --sans: 'Inter', system-ui, sans-serif;
+    --page: #e6e6e3;
+    --sheet: #f7f7f5;
+    --text: #111111;
+    --muted: #5d5d5a;
+    --line: #dcdcd8;
+    --shadow: 0 30px 60px -30px rgb(0 0 0 / 0.25);
+    /* tile palette — pastel tiles keep dark text in both themes */
+    --lavender: #8784da;
+    --pink: #e7a9f3;
+    --teal: #a6dcd5;
+    --violet: #a08ad8;
+    --yellow: #f7c46c;
+    --gray: #6b6b6b;
+    --ink: #111111;
+    --navy: #1e2a4a;
+    --display: 'Unbounded', system-ui, sans-serif;
+    --sans: 'Outfit', system-ui, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #121412;
-      --surface: #1a1d1a;
-      --text: #e9ebe6;
-      --muted: #9ba097;
-      --border: #2b302b;
-      --accent: #5fd393;
-      --accent-soft: #1d3326;
+      --page: #0d0d0d;
+      --sheet: #1a1a1a;
+      --text: #f2f2ee;
+      --muted: #a3a39d;
+      --line: #2e2e2e;
+      --shadow: 0 30px 60px -30px rgb(0 0 0 / 0.8);
+      --ink: #000000;
     }
   }
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--bg);
+    background: var(--page);
     color: var(--text);
-    font: 16px/1.6 var(--sans);
+    font: 17px/1.55 var(--sans);
     -webkit-font-smoothing: antialiased;
   }
-  a { color: var(--accent); }
+  a { color: inherit; }
   code {
-    font-family: var(--mono);
-    font-size: 0.88em;
-    background: var(--accent-soft);
-    padding: 0.1em 0.35em;
+    font-family: ui-monospace, monospace;
+    font-size: 0.85em;
+    background: rgb(255 255 255 / 0.12);
+    padding: 0.05em 0.35em;
     border-radius: 4px;
   }
 </style>
