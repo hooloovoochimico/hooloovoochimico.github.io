@@ -1,6 +1,6 @@
 import type { Lang } from './i18n';
 
-const GH = 'https://github.com/chemickypes';
+const GH = 'https://github.com/hooloovoochimico';
 
 export interface Project {
   name: string;
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     name: 'Redrawing Italy\'s Provinces',
     tone: 'pink',
     repo: `${GH}/map-project`,
-    live: 'https://chemickypes.github.io/map-project/',
+    live: 'https://hooloovoochimico.github.io/map-project/',
     tags: ['Python', 'GeoPandas', 'scikit-learn', 'Leaflet'],
     summary: {
       en: 'What if every Italian municipality joined the province whose capital is closest? A Voronoi-style reassignment of 7,896 comuni: 27% would change province. Interactive map and infographic.',
