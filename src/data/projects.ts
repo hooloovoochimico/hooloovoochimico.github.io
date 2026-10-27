@@ -80,16 +80,6 @@ export const projects: Project[] = [
     },
   },
   {
-    name: 'YT WrAIter',
-    tone: 'gray',
-    repo: `${GH}/YTWrAIter`,
-    tags: ['Python', 'Cheshire Cat AI', 'LLM'],
-    summary: {
-      en: 'A Cheshire Cat AI plugin that fetches YouTube transcripts and uses them for writing tasks such as summaries and translations.',
-      it: 'Plugin per Cheshire Cat AI che recupera le trascrizioni dei video YouTube e le usa per scrivere riassunti, traduzioni e altro.',
-    },
-  },
-  {
     name: 'footballerdata',
     tone: 'teal',
     repo: `${GH}/footballerdata`,

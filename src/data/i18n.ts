@@ -34,7 +34,7 @@ export const ui = {
     badge: 'open to new projects • open to new projects • ',
     stats: [
       { n: '12+', label: 'years on Android' },
-      { n: '8', label: 'live projects' },
+      { n: '7', label: 'live projects' },
       { n: '2', label: 'apps on Google Play' },
     ],
     aiTile: 'AI in my workflow',
@@ -80,7 +80,7 @@ export const ui = {
     badge: 'aperto a nuovi progetti • aperto a nuovi progetti • ',
     stats: [
       { n: '12+', label: 'anni su Android' },
-      { n: '8', label: 'progetti vivi' },
+      { n: '7', label: 'progetti vivi' },
       { n: '2', label: 'app su Google Play' },
     ],
     aiTile: "L'AI nel mio flusso",
