@@ -58,14 +58,14 @@ const fmt = (s: string) =>
         <div class="tiles">
           <a class="tile feature" href={featured.store}>
             <img src={featured.image} alt="" />
-            <span class="play" aria-hidden="true">▶</span>
+            <span class="arrow" aria-hidden="true">↗</span>
             <span class="cap">{t.featured} · {featured.name}</span>
           </a>
           <div class="stats">
             <div class="tile teal corner"><b>{t.stats[0].n}</b><span>{t.stats[0].label}</span></div>
             <div class="tile violet corner"><b>{t.stats[1].n}</b><span>{t.stats[1].label}</span></div>
           </div>
-          <a class="tile gray corner small" href={featured.store}>
+          <a class="tile gray corner small" href="#projects">
             <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4 2.5v19l17-9.5z" /></svg>
             <span>{t.stats[2].n} {t.stats[2].label}</span>
           </a>
@@ -234,12 +234,12 @@ const fmt = (s: string) =>
   }
   .feature { grid-column: 1 / 5; grid-row: span 2; background: var(--navy); display: grid; place-items: center; text-decoration: none; color: #fff; min-height: 260px; }
   .feature img { width: 46%; max-width: 220px; border-radius: 24px; }
-  .play {
-    position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
-    background: rgb(255 255 255 / 0.92); color: #111; display: grid; place-items: center; font-size: 1.1rem;
+  .arrow {
+    position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; border-radius: 50%;
+    background: rgb(255 255 255 / 0.92); color: #111; display: grid; place-items: center; font-size: 1.3rem;
     transition: transform 0.2s;
   }
-  .feature:hover .play { transform: scale(1.1); }
+  .feature:hover .arrow { transform: translate(2px, -2px); }
   .cap { position: absolute; left: 16px; bottom: 14px; font-size: 0.85rem; opacity: 0.85; }
   .stats { grid-column: 5 / 7; grid-row: span 2; display: grid; gap: 16px; }
   .stats .tile, .ai .yellow { padding: 18px; display: flex; flex-direction: column; justify-content: flex-end; color: #111; }
@@ -285,10 +285,10 @@ const fmt = (s: string) =>
   .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; font-weight: 600; }
   .links a { text-decoration: none; }
   .links a:hover { text-decoration: underline; }
-  .stack { grid-column: span 2; padding: 22px; }
+  .stack { padding: 22px; }
   .stack h3 { font-family: var(--display); margin: 0 0 12px; font-size: 1.15rem; }
   .stack p { margin: 0 0 8px; font-size: 0.95rem; }
-  .stack strong { display: inline-block; min-width: 110px; }
+  .stack strong { display: block; }
 
   /* experience */
   .lead { margin: -12px 0 24px; color: var(--muted); font-size: 1.1rem; }

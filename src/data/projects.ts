@@ -39,11 +39,12 @@ export const projects: Project[] = [
     name: 'Termina Launcher',
     tone: 'ink',
     repo: `${GH}/termina-launcher`,
+    store: 'https://play.google.com/store/apps/details?id=com.hooloovoochimico.terminalauncher',
     image: '/img/termina.png',
     tags: ['Kotlin', 'Jetpack Compose', 'Android'],
     summary: {
-      en: 'An Android home screen reimagined as a terminal. Type `chrome` to launch an app, `ls` to browse files, `/battery` for your charge. Themes and bash-style aliases in a `.terminarc` file.',
-      it: 'La home di Android trasformata in un terminale. Scrivi `chrome` per aprire un\'app, `ls` per sfogliare i file, `/battery` per la carica. Temi e alias in stile bash in un file `.terminarc`.',
+      en: 'An Android home screen reimagined as a terminal, on Google Play. Type `chrome` to launch an app, `ls` to browse files, `/battery` for your charge. Themes and bash-style aliases in a `.terminarc` file.',
+      it: 'La home di Android trasformata in un terminale, su Google Play. Scrivi `chrome` per aprire un\'app, `ls` per sfogliare i file, `/battery` per la carica. Temi e alias in stile bash in un file `.terminarc`.',
     },
   },
   {
@@ -88,11 +89,22 @@ export const projects: Project[] = [
       it: 'Plugin per Cheshire Cat AI che recupera le trascrizioni dei video YouTube e le usa per scrivere riassunti, traduzioni e altro.',
     },
   },
+  {
+    name: 'footballerdata',
+    tone: 'teal',
+    repo: `${GH}/footballerdata`,
+    tags: ['Python', 'Flask', 'scikit-learn', 'Ollama', 'RAG'],
+    summary: {
+      en: 'A Serie A player data explorer: scraping pipeline, ML quantile projections, career trajectories, heatmaps and match pages in a Flask web app, plus a local-AI analyst (Ollama) grounded on the dataset. Built on the La FantaOfficina engine.',
+      it: "Un esploratore di dati sui giocatori di Serie A: pipeline di scraping, proiezioni ML a quantili, traiettorie di carriera, heatmap e pagine partita in una web app Flask, più un analista AI locale (Ollama) ancorato ai dati. Costruito sul motore di La FantaOfficina.",
+    },
+  },
 ];
 
 export const skills: { group: Record<Lang, string>; items: string[] }[] = [
   { group: { en: 'Mobile', it: 'Mobile' }, items: ['Kotlin', 'Jetpack Compose', 'Kotlin Multiplatform', 'Android SDK', 'Flutter'] },
-  { group: { en: 'AI & backend', it: 'AI e backend' }, items: ['Python', 'LLM agents', 'Claude Code', 'OpenCode', 'Z.ai GLM', 'Claude / OpenAI / Gemini APIs', 'Agno', 'TypeScript'] },
+  { group: { en: 'Web & backend', it: 'Web e backend' }, items: ['React', 'Next.js', 'Node.js (Express, Hono)', 'Prisma / Drizzle', 'Supabase', 'Flask', 'Tailwind'] },
+  { group: { en: 'AI', it: 'AI' }, items: ['Python', 'LLM agents', 'RAG', 'Ollama', 'Claude Code', 'OpenCode', 'Z.ai GLM', 'Claude / OpenAI / Gemini APIs', 'Agno', 'TypeScript'] },
   { group: { en: 'Data', it: 'Dati' }, items: ['GeoPandas', 'scikit-learn', 'SQL', 'Leaflet'] },
   { group: { en: 'Embedded', it: 'Embedded' }, items: ['C++', 'ESP32', 'Arduino', 'PlatformIO'] },
 ];
