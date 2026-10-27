@@ -96,3 +96,68 @@ export const skills: { group: Record<Lang, string>; items: string[] }[] = [
   { group: { en: 'Data', it: 'Dati' }, items: ['GeoPandas', 'scikit-learn', 'SQL', 'Leaflet'] },
   { group: { en: 'Embedded', it: 'Embedded' }, items: ['C++', 'ESP32', 'Arduino', 'PlatformIO'] },
 ];
+
+export interface Job {
+  product: string;
+  years: string;
+  role: string;
+  tone: Project['tone'];
+  link?: string;
+  status: 'live' | 'closed';
+  summary: Record<Lang, string>;
+}
+
+export const jobs: Job[] = [
+  {
+    product: 'FIFA+',
+    years: '2022 — 2026',
+    role: 'Android Senior Engineer · Chili Tech, Globant',
+    tone: 'ink',
+    status: 'closed',
+    summary: {
+      en: "FIFA's official streaming platform for global football. Core contributor to the mobile and Android TV apps: complex video playback and UI in Jetpack Compose and Media3/ExoPlayer, tuned for everything from budget phones to large TV screens. The standalone service has since moved to DAZN.",
+      it: 'La piattaforma streaming ufficiale della FIFA per il calcio mondiale. Core contributor delle app mobile e Android TV: riproduzione video complessa e interfacce in Jetpack Compose e Media3/ExoPlayer, ottimizzate dagli smartphone economici ai grandi schermi TV. Il servizio è poi confluito in DAZN.',
+    },
+  },
+  {
+    product: 'CHILI',
+    years: '2022 — 2023',
+    role: 'Android Senior Developer · Chili Tech',
+    tone: 'pink',
+    link: 'https://it.chili.com',
+    status: 'live',
+    summary: {
+      en: 'Italian video-on-demand platform for renting and buying films. Built and maintained streaming features for CHILI and ITsArt on mobile and Android TV, with a focus on memory, playback stability and consistency across devices.',
+      it: 'Piattaforma italiana di video on demand per noleggiare e acquistare film. Ho sviluppato e mantenuto le funzionalità di streaming di CHILI e ITsArt su mobile e Android TV, curando memoria, stabilità della riproduzione e coerenza tra dispositivi.',
+    },
+  },
+  {
+    product: 'HYPE',
+    years: '2015 — 2021',
+    role: 'Android Developer & Team Leader · Bemind Interactive',
+    tone: 'teal',
+    link: 'https://www.hype.it',
+    status: 'live',
+    summary: {
+      en: 'One of the leading Italian challenger banks. I led the Android team from the early stages to millions of active users: app architecture, security standards for financial services, code reviews and mentoring.',
+      it: "Una delle principali challenger bank italiane. Ho guidato il team Android dalle prime fasi fino a milioni di utenti attivi: architettura dell'app, standard di sicurezza per i servizi finanziari, code review e mentoring.",
+    },
+  },
+];
+
+export const earlier: { years: string; text: Record<Lang, string> }[] = [
+  {
+    years: '2014 — 2015',
+    text: {
+      en: 'Android Developer at Datawizard (Pharmawizard app), training new Android developers.',
+      it: 'Android Developer in Datawizard (app Pharmawizard), formazione dei nuovi sviluppatori Android.',
+    },
+  },
+  {
+    years: '2009 — 2013',
+    text: {
+      en: "BSc in Computer Science, University of Rome Tor Vergata (105/110). Thesis on geolocation and Voronoi maps.",
+      it: 'Laurea in Informatica, Università di Roma Tor Vergata (105/110). Tesi su geolocalizzazione e mappe di Voronoi.',
+    },
+  },
+];

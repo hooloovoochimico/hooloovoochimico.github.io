@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { ui, type Lang } from '../data/i18n';
-import { projects, skills } from '../data/projects';
+import { projects, skills, jobs, earlier } from '../data/projects';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -10,6 +10,7 @@ const otherHref = lang === 'en' ? '/it/' : '/';
 const mail = 'mor.angelo.mor@gmail.com';
 const [featured] = projects;
 const sideNav = [
+  { href: '#experience', label: t.expTitle },
   { href: '#projects', label: t.nav.projects },
   { href: '#about', label: t.aboutTitle },
   { href: '#stack', label: t.stack },
@@ -82,6 +83,29 @@ const fmt = (s: string) =>
     <section class="intro">
       <h2 class="display">{t.headline}</h2>
       <p>{t.tagline}</p>
+    </section>
+
+    <section id="experience">
+      <h2 class="display sect">{t.expTitle}<span class="mark" aria-hidden="true"></span></h2>
+      <p class="lead">{t.expIntro}</p>
+      <div class="jobs">
+        {jobs.map((j) => (
+          <article class:list={['tile', 'job', 'corner', j.tone]}>
+            <p class="years">{j.years}</p>
+            <h3>{j.product}</h3>
+            <p class="role">{j.role}</p>
+            <p>{j.summary[lang]}</p>
+            <div class="links">
+              <span class:list={['status', j.status]}>{j.status === 'live' ? t.statusLive : t.statusClosed}</span>
+              {j.link && <a href={j.link}>{t.visit} ↗</a>}
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="earlier">
+        <h3>{t.earlierTitle}</h3>
+        {earlier.map((e) => <p><span>{e.years}</span>{e.text[lang]}</p>)}
+      </div>
     </section>
 
     <section id="projects">
@@ -266,6 +290,23 @@ const fmt = (s: string) =>
   .stack p { margin: 0 0 8px; font-size: 0.95rem; }
   .stack strong { display: inline-block; min-width: 110px; }
 
+  /* experience */
+  .lead { margin: -12px 0 24px; color: var(--muted); font-size: 1.1rem; }
+  .jobs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .job { padding: 26px; display: flex; flex-direction: column; }
+  .job .years { font-size: 0.85rem; opacity: 0.75; margin: 0 0 18px; }
+  .job h3 { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 4.5vw, 3.4rem); line-height: 1; margin: 0 0 10px; letter-spacing: -0.03em; }
+  .job .role { font-weight: 600; font-size: 0.9rem; opacity: 1; margin: 0 0 14px; }
+  .job p { margin: 0 0 16px; font-size: 0.95rem; opacity: 0.88; }
+  .status { font-size: 0.78rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; border: 1.5px solid currentColor; }
+  .status.live::before { content: '● '; color: #2f9a5b; }
+  .status.closed { opacity: 0.7; }
+  .links { align-items: center; }
+  .earlier { margin-top: 16px; border: 1px solid var(--line); border-radius: 16px; padding: 20px 24px; display: grid; grid-template-columns: auto 1fr 1fr; gap: 8px 28px; align-items: baseline; }
+  .earlier h3 { font-family: var(--display); font-size: 1rem; margin: 0; }
+  .earlier p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+  .earlier span { display: block; font-weight: 600; color: var(--text); font-size: 0.85rem; }
+
   /* about */
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
   .cols p { margin: 0; font-size: 1.1rem; }
@@ -280,7 +321,7 @@ const fmt = (s: string) =>
   footer { margin-top: 32px; color: var(--muted); font-size: 0.85rem; text-align: center; }
 
   @media (max-width: 900px) {
-    .hero, .intro, .cols { grid-template-columns: 1fr; }
+    .hero, .intro, .cols, .jobs, .earlier { grid-template-columns: 1fr; }
     .bento { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 560px) {
