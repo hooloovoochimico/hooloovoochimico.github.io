@@ -6,7 +6,7 @@ import { projects, skills, jobs, earlier } from '../data/projects';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang];
-const otherHref = lang === 'en' ? '/it/' : '/';
+const otherHref = lang === 'it' ? '/en/' : '/';
 const mail = 'mor.angelo.mor@gmail.com';
 const [featured] = projects;
 const sideNav = [
@@ -24,7 +24,7 @@ const fmt = (s: string) =>
 <Base lang={lang}>
   <div class="sheet">
     <header class="bar">
-      <a class="who" href={lang === 'en' ? '/' : '/it/'}>
+      <a class="who" href={lang === 'it' ? '/' : '/en/'}>
         <img src="/img/avatar.jpg" alt="" width="40" height="40" />
         <span><strong>Angelo Moroni</strong><small>{t.badge.split('•')[0].trim()}</small></span>
       </a>
