@@ -22,6 +22,17 @@ const site = Astro.site!.origin;
   </head>
   <body>
     <slot />
+    <script is:inline>
+      // GoatCounter: track outbound links and mailto clicks as events
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href]');
+        if (!a || !window.goatcounter?.count) return;
+        const href = a.getAttribute('href');
+        if (!/^(https?:|mailto:)/.test(href) || a.host === location.host) return;
+        window.goatcounter.count({ path: 'click: ' + href.replace(/^mailto:/, 'mail: '), title: a.textContent.trim(), event: true });
+      });
+    </script>
+    <script is:inline data-goatcounter="https://hooloovoochimico.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
 

@@ -205,10 +205,11 @@ const fmt = (s: string) =>
     display: flex; flex-direction: column; justify-content: space-around;
   }
   .side a {
-    writing-mode: vertical-rl; transform: rotate(180deg); text-decoration: none;
-    font-size: 0.75rem; letter-spacing: 0.04em; color: rgb(255 255 255 / 0.85);
+    display: block; writing-mode: vertical-rl; transform: rotate(180deg); text-decoration: none;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; color: #fff;
+    background: #111; padding: 10px 5px; border-radius: 999px; transition: background 0.2s, color 0.2s;
   }
-  .side a:hover { color: #fff; }
+  .side a:hover { background: var(--yellow); color: #111; }
   .photo {
     width: min(220px, 70%); aspect-ratio: 1; margin: 0 auto 20px; border-radius: 50%;
     background: var(--pink); border: 6px solid rgb(255 255 255 / 0.9); overflow: hidden;
